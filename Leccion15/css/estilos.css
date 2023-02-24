@@ -1,0 +1,28 @@
+.titulo {
+  color: blueviolet;
+  text-align: center;
+}
+
+.marco {
+  width: 100%;
+  height: 200%;
+  border: 1px solid black;
+}
+
+.centrar {
+  text-align: center;
+}
+
+.boton {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border: 2px solid;
+  /*para que respete los paddings de otros elementos*/
+  display: inline-block;
+  padding: 15px;
+}
+
+.boton:hover {
+  background-color: rgb(94, 94, 94);
+}

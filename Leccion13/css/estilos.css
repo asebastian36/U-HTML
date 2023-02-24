@@ -1,0 +1,18 @@
+h1 {
+  color: aqua;
+  text-align: center;
+}
+
+h2 {
+  color: cadetblue;
+}
+
+p {
+  color: darkslategray;
+}
+
+div {
+  border: 10px solid purple;
+  text-align: center;
+  background-color: bisque;
+}

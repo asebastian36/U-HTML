@@ -1,0 +1,39 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+table {
+    width: 40%;
+}
+
+caption, 
+table, 
+th, 
+td {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+caption {
+    /*ancho de la linea del caption*/
+    line-height: 40px;
+    /*pone la letra en negrita*/
+    font-weight: bolder;
+}
+
+th {
+    background-color: dimgray;
+    color: white;
+}
+
+/*seleccionar renglones pares o impares | even = par | odd = impar*/
+tr:nth-child(even) {
+    background-color: rgb(240, 240, 240);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(222, 221, 221);
+}

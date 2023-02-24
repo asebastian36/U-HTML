@@ -1,0 +1,32 @@
+/*para definir que estos estilos aplican a toda la pagina HTML*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*ejemplo de id o identificador css*/
+#titulo-principal {
+  color: rgb(2, 193, 193);
+  text-align: center;
+  margin: 15px;
+}
+
+h2 {
+  color: rgb(181, 95, 178);
+}
+
+p {
+  color: deeppink;
+}
+
+/*clase de CSS*/
+.tarjeta {
+  border: 10px solid purple;
+  text-align: center;
+  background-color: rgb(255, 206, 255);
+  margin: 15px 350px;
+  padding: 15px;
+}
+
+.titulo {
+  color: blueviolet;
+}

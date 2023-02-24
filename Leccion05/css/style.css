@@ -1,0 +1,38 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+p {
+  padding: 15px;
+  border: 10px solid powderblue;
+  margin: auto 10px;
+  /* 
+    alinear texto
+    text-align: center;
+
+    para centrar de manera horizontal
+    margin: auto 50px; (opcional los pixeles)
+    
+    establecer los mismos valores para arriba y abajo
+    pero diferentes los lados
+    margin: 5px 10px;
+
+    estables los de los lados igual pero inferior y superior diferente
+    marin: 10px 15px 5px;
+    
+    establecer todos iguales
+    margin: 20px;
+
+    establecer uno por uno los margin
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    */
+}
+a {
+  padding: 15px;
+  border: 10px solid greenyellow;
+  margin: auto 10px;
+  color: blueviolet;
+}

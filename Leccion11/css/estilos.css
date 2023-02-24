@@ -1,0 +1,21 @@
+ol {
+  list-style: none;
+  /* esto se pone si usas el metodo counter para que se reinicie el contador con cada lista nueva*/
+  counter-reset: contador;
+}
+
+ol li {
+  /* para que se incremente el contador al agregar un elemento a la lista*/
+  counter-increment: contador;
+}
+
+/*para que se muestre la palabra curso antes de cada elemento de la lista*/
+ol li::before {
+  /*para agregar un contador agregar una variable que
+     cuente los elementos de la lista counter()*/
+  content: counter(contador) ") Curso ";
+}
+
+ol li::after {
+  content: ".";
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo DOM con Javascript</title>
+</head>
+<body>
+  <!-- onmouseover al estar el cursos en el elemento -->
+  <!-- al pasar el cursor y luego alejar el cursor del elemento -->
+  <h1 id="titulo" onmouseover="cambiarColor(this, 'green')" onmouseout="cambiarColor(this, 'orange')">Manejo DOM con Javascript</h1>
+
+  <!-- onmousedown al mantener el click en el elemento -->
+  <!-- onmouseup al soltar el click del elemento -->
+  <!-- onclick al dar click en el elemento, se quedara el cambio hasta refrescar la pagina -->
+  <p id="parrafo" onmousedown="cambiarColor(this, 'red')" onmouseup="cambiarColor(this, 'purple')" onclick="cambiarColor(this, 'pink')" >Mucho texto, muchisimo texto, demasiaaaado texto...</p>
+  <br>
+  <!-- evento onchange -->
+  Nombre: <input type="text" id="nombre" onchange="convertir(this)" onfocus="cambiarFondo(this, 'yellow')" onblur="cambiarFondo(this, 'white')">
+  <br>
+  <br>
+  <!-- eventos onfocus y onblur -->
+  <!-- onfocus al dar click cambia el fondo -->
+  <!-- onblur regresa el color del fondo a blanco -->
+  Apellido: <input type="text" onfocus="cambiarFondo(this, 'yellow')" onblur="cambiarFondo(this, 'white')">
+  <br>
+  <br>
+  Telefono: <input type="text" id="telefono">
+  <br>
+  <br>
+  Correo electronico: <input type="text" id="correo">
+  <script>
+    function convertir(nombre) {
+      //  pasar el texto del input a mayuscula
+      nombre.value = nombre.value.toUpperCase();
+    }
+
+    function cambiarColor(elemento, color) {
+      elemento.style.color = color;
+    }
+
+    function cambiarFondo(elemento, color) {
+      elemento.style.background = color;
+    }
+
+    //  asociar eventos desde js, como argumento ponemos los eventos sin el on
+    //   y el segundo argumento es el comportamiento
+    document.getElementById("telefono").addEventListener("focus", cambiar);
+    document.getElementById("telefono").addEventListener("blur", regresar);
+    
+    //  definimos las funciones con los comportamientos
+    function cambiar(evento) {
+      //  el .target recupera el objeto en este caso la etiqueta
+      evento.target.style.background = "yellow";
+    }
+
+    function regresar(evento) {
+      evento.target.style.background = "white";
+    }
+
+    //  usar funciones flecha con el addEventListener:
+    document.getElementById("correo").addEventListener("focus", (evento) => {
+      evento.target.style.background = "green";
+    });
+
+    document.getElementById("correo").addEventListener("blur", (evento) => {
+      evento.target.style.background = "white";
+    });
+
+    //  nota las funciones flecha no son reutilizables
+  </script>
+</body>
+</html>

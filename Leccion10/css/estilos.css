@@ -1,0 +1,25 @@
+ul {
+  /*para quitar los simbolos de la lista*/
+  list-style-type: none;
+  background-color: black;
+  /*para hacer la lista un bloque independiente*/
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  /*para alinear los elementos de la lista a la izquierda*/
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(52, 51, 51);
+}

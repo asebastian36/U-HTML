@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo Formulario con Javascript</title>
+  </head>
+  <body>
+    <form id="formulario">
+      Nombre: <input type="text" name="nombre" />
+      <br />
+      apellido: <input type="text" name="apellido" />
+      <br />
+    </form>
+    <!-- llamada al metodo que se creo -->
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="valores">
+      <!-- para mostrar el texto de la funcion -->
+    </div>
+    <script>
+      function mostrarValores() {
+        //  recuperamos el formulario
+        let formulario = document.forms["formulario"];
+        let texto = "";
+
+        for (let elemento of formulario) {
+          //  texto += elemento.value + "</br>";
+        }
+
+        //  acceder a elementos especificos del formulario con el name
+        //  se usa el atributo value para obtener el texto dado que formulario regresa un objeto del input
+        texto += formulario["nombre"].value + "</br>";
+        texto += formulario["apellido"].value + "</br>";
+
+        //  para mandarlo al html
+        document.getElementById("valores").innerHTML = texto;
+      }
+    </script>
+  </body>
+</html>

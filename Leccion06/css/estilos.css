@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+}
+
+/*link sin visitar o sin dar click*/
+a:link {
+  color: aquamarine;
+  /*quitar subrayado*/
+  text-decoration: none;
+}
+
+/*cuando ya visitamos el link*/
+a:visited {
+  color: crimson;
+  text-decoration: none;
+}
+
+/*cuando el cursor esta sobre el link*/
+a:hover {
+  color: chartreuse;
+  /*agregar subrayado*/
+  text-decoration: underline;
+}
+/*cuando el cursor esta sobre el link y le damos click*/
+a:active {
+  color: darkgreen;
+  text-decoration: underline;
+}

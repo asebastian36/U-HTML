@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo DOM con Javascript</title>
+    <style>
+      .azul {
+        color:blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="encabezado">Ejemplo DOM con Javascript</h1>
+    <h2 class="azul">soy otro encabezado</h2>
+    <p class="azul">otro parrafo.</p>
+    <p class="azul">Saludos!</p>
+    <!-- el script debe estar despues de los elementos a modificar -->    
+    <!-- agregar codigo js -->
+    <script>
+      //  recuperar las etiquetas con su id
+      let encabezado = document.getElementById("encabezado");
+
+      // modificar contenido de la etiqueta
+      encabezado.innerHTML = "Nuevo encabezado";
+
+      //  recuperar el texto en la etiqueta con la propiedad innerHTML
+      encabezado = document.getElementById("encabezado").innerHTML;
+
+      //  guardar elementos por etiqueta, si es mas de uno se guardan en un arreglo
+      let parrafos = document.getElementsByTagName("p");
+
+      //  recuperar elementos con la misma clase
+      let claseAzul = document.getElementsByClassName("azul");
+
+      //  obtener elementos de un tipo especifico que esten en una misma clase
+      let elementos = document.querySelectorAll("p.azul");
+
+
+      
+    </script>
+  </body>
+</html>
